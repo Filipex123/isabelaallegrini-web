@@ -1,4 +1,4 @@
-import { Menu, X, Phone, Mail, Instagram, MapPin, Clock } from 'lucide-react';
+import { Clock, Instagram, Mail, MapPin, Menu, Phone, X } from 'lucide-react';
 import { useState } from 'react';
 import ImagemResponsiva from './ImagemResponsiva.tsx';
 
@@ -126,7 +126,7 @@ function App() {
           <div className="text-center">
             <div className=""></div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-4 md:mb-6 tracking-tight">Dra. Isabela Allegrini Zanelato</h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-[#c59878] mb-6 md:mb-8 font-light">Dermatologia Regenerativa Integrativa</p>
+            <p className="text-xl sm:text-2xl md:text-3xl text-[#c59878] mb-6 md:mb-8 font-light">Dermatologia Estética Integrativa</p>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4">
               Cuidado personalizado com foco na saúde e beleza natural da sua pele, unindo ciência, tecnologia e uma abordagem humanizada.
             </p>
@@ -146,7 +146,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6 order-2 md:order-1">
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Sou Isabela Allegrini Zanelato, formada pela faculdade de medicina de Catanduva(Fameca). Me especializei em Dermatologia estética e regenerativa. Minha paixão é ajudar cada paciente a
+                Sou Isabela Allegrini Zanelato, formada pela faculdade de medicina de Catanduva(Fameca). Me especializei em Dermatologia estética e integrativa. Minha paixão é ajudar cada paciente a
                 alcançar a melhor versão de si mesmo, combinando técnicas avançadas com uma abordagem personalizada e humanizada.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
@@ -168,12 +168,12 @@ function App() {
 
       <section id="dermatology" className="py-16 md:py-24 bg-gradient-to-br from-[#f5ebe5] to-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 text-center mb-8 md:mb-12">Dermatologia Regenerativa Integrativa</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 text-center mb-8 md:mb-12">Dermatologia Estética Integrativa</h2>
           <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
             <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm">
               <h3 className="text-xl md:text-2xl font-light text-[#c59878] mb-4">O que é?</h3>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                A dermatologia regenerativa integrativa é uma abordagem inovadora que une os avanços científicos da medicina regenerativa com uma visão holística do paciente. Vai além do tratamento
+                A dermatologia estética integrativa é uma abordagem inovadora que une os avanços científicos da medicina integrativa com uma visão holística do paciente. Vai além do tratamento
                 superficial, focando na regeneração celular profunda e no estímulo dos processos naturais de cura e renovação da pele.
               </p>
             </div>
@@ -333,7 +333,7 @@ function App() {
       <footer className="bg-gray-900 text-white py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xl md:text-2xl font-light mb-2">Dra. Isabela Allegrini Zanelato</p>
-          <p className="text-sm md:text-base text-gray-400 mb-4">Dermatologia Regenerativa Integrativa</p>
+          <p className="text-sm md:text-base text-gray-400 mb-4">Dermatologia Estética Integrativa</p>
           <p className="text-xs md:text-sm text-gray-500">CRM 252.120 | Todos os direitos reservados © 2025</p>
         </div>
       </footer>
