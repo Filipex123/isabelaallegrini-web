@@ -1,4 +1,4 @@
-import { Clock, Instagram, Mail, MapPin, Menu, Phone, X } from 'lucide-react';
+import { Clock, Instagram, Mail, MapPin, Menu, Phone, X, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 import ImagemResponsiva from './ImagemResponsiva.tsx';
 
@@ -116,30 +116,24 @@ function App() {
         )}
       </nav>
 
-      <section id="home" className="pt-16 md:pt-20 min-h-screen flex items-center relative overflow-hidden">
+      <section id="home" className="pt-16 md:pt-20 min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <ImagemResponsiva />
           <div className="absolute inset-0 bg-gradient-to-r from-[#f5ebe5]/75 via-[#f5ebe5]/90 to-[#f5ebe5]/70"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#f5ebe5]"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
-          <div className="text-center">
-            <div className=""></div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-800 mb-4 md:mb-6 tracking-tight leading-tight">
-              Cuidar da pele é mais do que estética.<br />
-              É restaurar equilíbrio, vitalidade e confiança.
-            </h1>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#c59878] mb-6 md:mb-8 font-light italic">Dra. Isabela Allegrini Zanelato</h2>
-            <p className="text-xl sm:text-2xl md:text-3xl text-[#c59878] mb-6 md:mb-8 font-light">Dermatologia Estética Integrativa</p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10 flex-grow flex items-center">
+          <div className="text-center w-full">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-8 md:mb-12 tracking-tight">Cuidar da pele é mais do que estética.<br />É restaurar equilíbrio, vitalidade e confiança.</h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Cuidado personalizado com foco na saúde e beleza natural da sua pele, unindo ciência, tecnologia e uma abordagem humanizada.
             </p>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-[#c59878] text-white px-8 py-3 md:px-10 md:py-4 rounded-full text-base md:text-lg hover:bg-[#b58768] transition-all transform hover:scale-105 shadow-lg"
-            >
-              Agende sua Consulta
-            </button>
+          </div>
+        </div>
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-20 relative z-10">
+          <div className="text-center">
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#c59878] mb-6 md:mb-8 font-light italic">Dra. Isabela Allegrini Zanelato</p>
+            <p className="text-xl sm:text-2xl md:text-3xl text-[#c59878] mb-6 md:mb-8 font-light">Dermatologia Estética Integrativa</p>
           </div>
         </div>
       </section>
@@ -341,6 +335,16 @@ function App() {
           <p className="text-xs md:text-sm text-gray-500">CRM 252.120 | Todos os direitos reservados © 2025</p>
         </div>
       </footer>
+
+      <a
+        href="https://wa.me/5517997828512"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all transform hover:scale-110 z-40 flex items-center justify-center"
+        title="Fale conosco no WhatsApp"
+      >
+        <MessageCircle size={28} />
+      </a>
     </div>
   );
 }
