@@ -125,7 +125,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
           <div className="text-center">
             <div className=""></div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-4 md:mb-6 tracking-tight">Dra. Isabela Allegrini Zanelato</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-800 mb-4 md:mb-6 tracking-tight leading-tight">
+              Cuidar da pele é mais do que estética.<br />
+              É restaurar equilíbrio, vitalidade e confiança.
+            </h1>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#c59878] mb-6 md:mb-8 font-light italic">Dra. Isabela Allegrini Zanelato</h2>
             <p className="text-xl sm:text-2xl md:text-3xl text-[#c59878] mb-6 md:mb-8 font-light">Dermatologia Estética Integrativa</p>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4">
               Cuidado personalizado com foco na saúde e beleza natural da sua pele, unindo ciência, tecnologia e uma abordagem humanizada.
@@ -146,7 +150,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6 order-2 md:order-1">
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Sou Isabela Allegrini Zanelato, formada pela faculdade de medicina de Catanduva(Fameca). Me especializei em Dermatologia estética e integFhredrativa. Minha paixão é ajudar cada paciente a
+                Sou Isabela Allegrini Zanelato, formada pela faculdade de medicina de Catanduva(Fameca). Me especializei em Dermatologia estética e integrativa. Minha paixão é ajudar cada paciente a
                 alcançar a melhor versão de si mesmo, combinando técnicas avançadas com uma abordagem personalizada e humanizada.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
