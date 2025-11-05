@@ -124,16 +124,20 @@ function App() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10 flex-grow flex items-center">
           <div className="text-center w-full">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-8 md:mb-12 tracking-tight">Cuidar da pele é mais do que estética.<br />É restaurar equilíbrio, vitalidade e confiança.</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-8 md:mb-12 tracking-tight">Dra. Isabela Allegrini Zanelato<br />
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Cuidado personalizado com foco na saúde e beleza natural da sua pele, unindo ciência, tecnologia e uma abordagem humanizada.
             </p>
+            {/* <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-8 md:mb-12 tracking-tight">Cuidar da pele é mais do que estética.<br />É restaurar equilíbrio, vitalidade e confiança.</h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+              Cuidado personalizado com foco na saúde e beleza natural da sua pele, unindo ciência, tecnologia e uma abordagem humanizada.
+            </p> */}
           </div>
         </div>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-20 relative z-10">
           <div className="text-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#c59878] mb-6 md:mb-8 font-light italic">Dra. Isabela Allegrini Zanelato</p>
-            <p className="text-xl sm:text-2xl md:text-3xl text-[#c59878] mb-6 md:mb-8 font-light">Dermatologia Estética Integrativa</p>
+            {/* <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#c59878] mb-6 md:mb-8 font-light italic">Dra. Isabela Allegrini Zanelato</p>
+            <p className="text-xl sm:text-2xl md:text-3xl text-[#c59878] mb-6 md:mb-8 font-light">Dermatologia Estética Integrativa</p> */}
           </div>
         </div>
       </section>
