@@ -124,7 +124,7 @@ function App() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10 flex-grow flex items-center">
           <div className="text-center w-full">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-8 md:mb-12 tracking-tight">Dra. Isabela Allegrini Zanelato<br />
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-8 md:mb-12 tracking-tight">Dra. Isabela Allegrini Zanelato</h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Cuidado personalizado com foco na saúde e beleza natural da sua pele, unindo ciência, tecnologia e uma abordagem humanizada.
             </p>
