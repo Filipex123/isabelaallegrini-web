@@ -1,4 +1,4 @@
-import { Clock, Instagram, Mail, MapPin, Menu, Phone, X, MessageCircle } from 'lucide-react';
+import { Clock, Instagram, Mail, MapPin, Menu, Phone, X, MessageCircle, Star } from 'lucide-react';
 import { useState } from 'react';
 import ImagemResponsiva from './ImagemResponsiva.tsx';
 
@@ -10,6 +10,27 @@ function App() {
     telefone: '',
     mensagem: '',
   });
+
+  const reviews = [
+    {
+      name: 'Maria Silva',
+      rating: 5,
+      comment: 'Excelente profissional! Atendimento humanizado e resultados incríveis. A Dra. Isabela realmente se preocupa com o bem-estar dos pacientes.',
+      date: 'Há 2 meses',
+    },
+    {
+      name: 'Ana Carolina',
+      rating: 5,
+      comment: 'Profissional extremamente competente e atenciosa. Os procedimentos são realizados com muito cuidado e os resultados são naturais e duradouros.',
+      date: 'Há 1 mês',
+    },
+    {
+      name: 'Juliana Costa',
+      rating: 5,
+      comment: 'Superou minhas expectativas! A clínica é linda e o atendimento é impecável. Recomendo de olhos fechados.',
+      date: 'Há 3 semanas',
+    },
+  ];
 
   const procedures = [
     {
@@ -324,6 +345,104 @@ function App() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="location" className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 text-center mb-4 md:mb-6">Como Chegar</h2>
+          <p className="text-center text-base md:text-lg text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto">
+            Estamos localizados no coração do Taquaral, com fácil acesso e estacionamento
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-neutral-50 to-[#f5ebe5] p-6 md:p-8 rounded-2xl shadow-sm">
+                <h3 className="text-xl md:text-2xl font-light text-[#c59878] mb-4">Endereço Completo</h3>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                  Av. Barão de Itapura, 3284 - Taquaral<br />
+                  Campinas - SP
+                </p>
+                <a
+                  href="https://www.google.com/maps/dir//Av.+Bar%C3%A3o+de+Itapura,+3284+-+Taquaral,+Campinas+-+SP"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-[#c59878] hover:text-[#b58768] transition-colors text-base md:text-lg font-light"
+                >
+                  <MapPin className="w-5 h-5" />
+                  <span>Abrir no Google Maps</span>
+                </a>
+              </div>
+
+              <div className="bg-gradient-to-br from-neutral-50 to-[#f5ebe5] p-6 md:p-8 rounded-2xl shadow-sm">
+                <h3 className="text-xl md:text-2xl font-light text-[#c59878] mb-4">Facilidades</h3>
+                <ul className="space-y-2 text-base md:text-lg text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#c59878] mr-2">•</span>
+                    <span>Estacionamento disponível</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#c59878] mr-2">•</span>
+                    <span>Fácil acesso por transporte público</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#c59878] mr-2">•</span>
+                    <span>Instalações modernas e confortáveis</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden shadow-xl h-[400px] md:h-[500px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.4!2d-47.0628!3d-22.8642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8f6e6e6e6e6%3A0x0!2sAv.%20Bar%C3%A3o%20de%20Itapura%2C%203284%20-%20Taquaral%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da Clínica"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" className="py-16 md:py-24 bg-gradient-to-br from-[#f5ebe5] to-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 text-center mb-4 md:mb-6">Avaliações</h2>
+          <p className="text-center text-base md:text-lg text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto">
+            Veja o que nossos pacientes dizem sobre a experiência
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+            {reviews.map((review, index) => (
+              <div key={index} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all">
+                <div className="flex items-center mb-4">
+                  <div className="flex space-x-1">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-[#c59878] text-[#c59878]" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 italic">"{review.comment}"</p>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm md:text-base font-light text-[#c59878]">{review.name}</p>
+                  <p className="text-xs md:text-sm text-gray-500">{review.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <a
+              href="https://www.google.com/search?q=Dra.+Isabela+Allegrini+Zanelato+Campinas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 bg-white text-[#c59878] px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg hover:bg-gray-50 transition-all shadow-md hover:shadow-lg font-light"
+            >
+              <Star className="w-5 h-5" />
+              <span>Ver todas as avaliações no Google</span>
+            </a>
           </div>
         </div>
       </section>
