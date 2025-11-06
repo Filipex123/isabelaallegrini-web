@@ -1,5 +1,6 @@
-import { Clock, Instagram, Mail, MapPin, Menu, Phone, X, MessageCircle, Star } from 'lucide-react';
+import { Clock, Instagram, Mail, MapPin, Menu, MessageCircle, Phone, Star, X } from 'lucide-react';
 import { useState } from 'react';
+import GoogleReviews from './GoogleReviews.tsx';
 import ImagemResponsiva from './ImagemResponsiva.tsx';
 
 function App() {
@@ -143,18 +144,22 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#f5ebe5]/75 via-[#f5ebe5]/90 to-[#f5ebe5]/70"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#f5ebe5]"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10 flex-grow flex items-center">
-          <div className="text-center w-full">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-8 md:mb-12 tracking-tight">Cuidar da pele é mais do que estética.<br />É restaurar equilíbrio, vitalidade e confiança.</h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-20 relative z-10">
+          <div className="text-center">
+            <div className=""></div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-4 md:mb-6 tracking-tight">Dra. Isabela Allegrini Zanelato</h1>
+            <p className="text-xl sm:text-2xl md:text-3xl text-[#c59878] mb-6 md:mb-8 font-light">Dermatologia Estética Integrativa</p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4">
               Cuidado personalizado com foco na saúde e beleza natural da sua pele, unindo ciência, tecnologia e uma abordagem humanizada.
             </p>
           </div>
-        </div>
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-20 relative z-10">
           <div className="text-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#c59878] mb-6 md:mb-8 font-light italic">Dra. Isabela Allegrini Zanelato</p>
-            <p className="text-xl sm:text-2xl md:text-3xl text-[#c59878] mb-6 md:mb-8 font-light">Dermatologia Estética Integrativa</p>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="bg-[#c59878] text-white px-8 py-3 md:px-10 md:py-4 rounded-full text-base md:text-lg hover:bg-[#b58768] transition-all transform hover:scale-105 shadow-lg"
+            >
+              Agende sua Consulta
+            </button>
           </div>
         </div>
       </section>
@@ -352,15 +357,14 @@ function App() {
       <section id="location" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 text-center mb-4 md:mb-6">Como Chegar</h2>
-          <p className="text-center text-base md:text-lg text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto">
-            Estamos localizados no coração do Taquaral, com fácil acesso e estacionamento
-          </p>
+          <p className="text-center text-base md:text-lg text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto">Estamos localizados no coração do Taquaral, com fácil acesso e estacionamento</p>
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-neutral-50 to-[#f5ebe5] p-6 md:p-8 rounded-2xl shadow-sm">
                 <h3 className="text-xl md:text-2xl font-light text-[#c59878] mb-4">Endereço Completo</h3>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-                  Av. Barão de Itapura, 3284 - Taquaral<br />
+                  Av. Barão de Itapura, 3284 - Taquaral
+                  <br />
                   Campinas - SP
                 </p>
                 <a
@@ -412,26 +416,9 @@ function App() {
       <section id="reviews" className="py-16 md:py-24 bg-gradient-to-br from-[#f5ebe5] to-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 text-center mb-4 md:mb-6">Avaliações</h2>
-          <p className="text-center text-base md:text-lg text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto">
-            Veja o que nossos pacientes dizem sobre a experiência
-          </p>
+          <p className="text-center text-base md:text-lg text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto">Veja o que nossos pacientes dizem sobre a experiência</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
-            {reviews.map((review, index) => (
-              <div key={index} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all">
-                <div className="flex items-center mb-4">
-                  <div className="flex space-x-1">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-[#c59878] text-[#c59878]" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 italic">"{review.comment}"</p>
-                <div className="flex items-center justify-between">
-                  <p className="text-sm md:text-base font-light text-[#c59878]">{review.name}</p>
-                  <p className="text-xs md:text-sm text-gray-500">{review.date}</p>
-                </div>
-              </div>
-            ))}
+            <GoogleReviews />
           </div>
           <div className="text-center">
             <a
